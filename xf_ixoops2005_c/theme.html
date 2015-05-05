@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<title>webdesign essai - <{$xoops_pagetitle}></title>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="description" content="<{$xoops_meta_description}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/style.css" />
+<!--<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+//-->
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/menu.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/themes/<{$xoops_theme}>/blocks.css" />
+<script language="JavaScript">
+<!--
+function SymError()
+{
+  return true;
+}
+window.onerror = SymError;
+var SymRealWinOpen = window.open;
+function SymWinOpen(url, name, attributes)
+{
+  return (new Object());
+}
+window.open = SymWinOpen;
+//-->
+</script>
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+</head>
+<body>
+<div id="page">
+<div id="topheader">
+<div id="navcontainer">
+		<ul id="navlist">
+  	<li id="active"><a id="current" href="<{$xoops_url}>">home</a> </li>
+  	<li><a href="<{$xoops_url}>">shop</a> </li>
+  	<li><a href="<{$xoops_url}>/modules/sitemap/">sitemap</a> </li>
+  	<li><a href="<{$xoops_url}>/modules/contact/">contact</a> </li>
+  	<li><a href="<{$xoops_url}>/user.php">login</a> </li>
+  	</ul>
+  	</div>
+</div>	
+<div id="header"></div>	
+<div id="pagelayer">
+<div id="container<{$xoops_lblocks}><{$xoops_showrblock}>">	
+	<{if $xoops_lblocks == ''}> <{else}>
+	<div id="blockleft">
+<!--	<div class="ltitle"><h3>Farbwahl</h3></div>
+<div class="lblockcontent">
+	<ul><li><a href="<{$css_change}>styla">: - : grau</a></li>
+<li><a href="<{$css_change}>stylb">: - : blau</a></li>
+<li><a href="<{$css_change}>stylc">: - : gr&uuml;n</a></li>
+<li><a href="<{$css_change}>styld">: - : rot</a></li></ul></div>	 -->
+	<{foreach item=block from=$xoops_lblocks}><{include file="$xoops_theme/blocks/theme_blockleft.html"}><{/foreach}>
+	</div><{/if}>
+	<{if $xoops_showrblock == 1}>
+	<div id="blockright<{$xoops_lblocks}>"><{foreach item=block from=$xoops_rblocks}><{include file="$xoops_theme/blocks/theme_blockright.html"}><{/foreach}>
+	</div>
+	<{/if}>	
+	<div id="content<{$xoops_lblocks}><{$xoops_showrblock}>">
+	<{if $xoops_showcblock == 1}><{foreach item=block from=$xoops_clblocks}><{include file="$xoops_theme/blocks/theme_blockcenter_l.html"}><{/foreach}>
+	<{foreach item=block from=$xoops_ccblocks}><{include file="$xoops_theme/blocks/theme_blockcenter_c.html"}><{/foreach}><{/if}>
+	<div id="modulcontent"><{$xoops_contents}></div>
+	<{foreach item=block from=$xoops_crblocks}>
+	<{include file="$xoops_theme/blocks/theme_blockcenter_r.html"}><{/foreach}>
+	</div>
+	<div id="footer"></div>	
+<div id="pagefooter"><br /><p><{$xoops_footer}></a></p></div>
+	<div style="clear: both;"></div></div></div>
+</body>
+</html>
+
+
+<script language="JavaScript">
+<!--
+var SymRealOnLoad;
+var SymRealOnUnload;
+
+function SymOnUnload()
+{
+  window.open = SymWinOpen;
+  if(SymRealOnUnload != null)
+     SymRealOnUnload();
+}
+
+function SymOnLoad()
+{
+  if(SymRealOnLoad != null)
+     SymRealOnLoad();
+  window.open = SymRealWinOpen;
+  SymRealOnUnload = window.onunload;
+  window.onunload = SymOnUnload;
+}
+
+SymRealOnLoad = window.onload;
+window.onload = SymOnLoad;
+
+//-->
+</script>
+
